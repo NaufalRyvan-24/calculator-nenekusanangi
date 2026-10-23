@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101321">
+  <title>Kalkulator — Hitung dengan mudah</title>
+  <link rel="icon" href="foto/NENE%20KUSANAGI.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <img class="ambient-photo ambient-photo--left" src="foto/%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%80%8EAgain%20And%20Again%20Ambition%EF%BC%81%E3%80%8F%20%E3%80%8ECrawl%20out%E2%80%A6.jpg" alt="" aria-hidden="true">
+  <img class="ambient-photo ambient-photo--right" src="foto/Kasunagi%20nene.jpg" alt="" aria-hidden="true">
+  <img class="ambient-photo ambient-photo--extra" src="foto/%E2%8B%86%20%F0%90%99%9A%20%E2%82%8A%20%C2%B0%20%E2%8A%B9%20%E2%99%A1.jpg" alt="" aria-hidden="true">
+  <img class="ambient-photo ambient-photo--fourth" src="foto/%E2%9F%A1%20nene%20kusa%EF%BD%A1%20icon%20_.jpg" alt="" aria-hidden="true">
+  <main class="calculator" aria-label="Kalkulator">
+    <header class="calculator__header">
+      <div class="brand">
+        <img class="brand__icon" src="foto/NENE%20KUSANAGI.jpg" alt="">
+        <span class="brand__name">nene kusanagi</span>
+      </div>
+      <span class="calculator__label">KALKULATOR</span>
+    </header>
+
+    <section class="display" aria-live="polite" aria-atomic="true">
+      <img class="display__decoration" src="foto/Nene%20kusanagi%20wl1%20icon%20(%F0%9F%8E%AE).jpg" alt="">
+      <div class="display__expression" id="expression"></div>
+      <output class="display__value" id="display" for="calculator-keys">0</output>
+    </section>
+
+    <section class="keypad" id="calculator-keys" aria-label="Tombol kalkulator">
+      <button class="key key--utility" type="button" data-action="clear" aria-label="Hapus semua">AC</button>
+      <button class="key key--utility" type="button" data-action="sign" aria-label="Ubah tanda">+/−</button>
+      <button class="key key--utility" type="button" data-action="percent" aria-label="Persen">%</button>
+      <button class="key key--operator" type="button" data-operator="÷" aria-label="Bagi">÷</button>
+
+      <button class="key" type="button" data-number="7">7</button>
+      <button class="key" type="button" data-number="8">8</button>
+      <button class="key" type="button" data-number="9">9</button>
+      <button class="key key--operator" type="button" data-operator="×" aria-label="Kali">×</button>
+
+      <button class="key" type="button" data-number="4">4</button>
+      <button class="key" type="button" data-number="5">5</button>
+      <button class="key" type="button" data-number="6">6</button>
+      <button class="key key--operator" type="button" data-operator="−" aria-label="Kurang">−</button>
+
+      <button class="key" type="button" data-number="1">1</button>
+      <button class="key" type="button" data-number="2">2</button>
+      <button class="key" type="button" data-number="3">3</button>
+      <button class="key key--operator" type="button" data-operator="+" aria-label="Tambah">+</button>
+
+      <button class="key key--utility key--backspace" type="button" data-action="backspace" aria-label="Hapus digit terakhir">⌫</button>
+      <button class="key" type="button" data-number="0">0</button>
+      <button class="key" type="button" data-action="decimal" aria-label="Desimal">.</button>
+      <button class="key key--equals" type="button" data-action="equals" aria-label="Hasil">=</button>
+    </section>
+
+    <footer class="calculator__footer">
+      <span>Perhitungan jadi lebih mudah</span>
+      <span class="keyboard-hint">bisa pakai keyboard</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

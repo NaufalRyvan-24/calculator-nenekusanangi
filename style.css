@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  color-scheme: dark;
+  font-family: "DM Sans", sans-serif;
+  background: #101a16;
+  color: #f5f5fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  overflow-x: hidden;
+  background:
+    radial-gradient(ellipse at 15% 15%, rgb(63 190 115 / 25%), transparent 36%),
+    linear-gradient(145deg, rgb(9 23 17 / 76%), rgb(10 28 19 / 59%)),
+    url("./foto/1VIRTUAL SINGER cards - Google Drive.jpg") center 42% / cover fixed;
+}
+
+button {
+  font: inherit;
+}
+
+.ambient-photo {
+  position: fixed;
+  z-index: 0;
+  width: clamp(110px, 15vw, 190px);
+  aspect-ratio: 1;
+  border: 3px solid rgb(255 255 255 / 76%);
+  border-radius: 28px;
+  object-fit: cover;
+  opacity: 0.88;
+  pointer-events: none;
+  box-shadow: 0 18px 55px rgb(0 0 0 / 36%);
+}
+
+.ambient-photo--left {
+  top: 14%;
+  left: max(4%, calc(50% - 440px));
+  transform: rotate(-10deg);
+}
+
+.ambient-photo--right {
+  right: max(4%, calc(50% - 440px));
+  bottom: 12%;
+  transform: rotate(9deg);
+}
+
+.ambient-photo--extra {
+  bottom: 13%;
+  left: max(4%, calc(50% - 440px));
+  width: clamp(86px, 11vw, 140px);
+  border-radius: 23px;
+  transform: rotate(8deg);
+}
+
+.ambient-photo--fourth {
+  top: 14%;
+  right: max(4%, calc(50% - 440px));
+  width: clamp(86px, 11vw, 140px);
+  border-radius: 23px;
+  transform: rotate(-8deg);
+}
+
+.calculator {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 390px);
+  padding: 25px;
+  border: 1px solid rgb(255 255 255 / 9%);
+  border-radius: 29px;
+  background: linear-gradient(155deg, rgb(28 48 38 / 92%), rgb(17 35 27 / 91%));
+  box-shadow: 0 30px 80px rgb(0 0 0 / 42%), inset 0 1px rgb(255 255 255 / 12%);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+.calculator__header,
+.brand,
+.calculator__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  justify-content: flex-start;
+  gap: 9px;
+}
+
+.brand__icon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 28%);
+}
+
+.brand__name {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+
+.calculator__label {
+  color: #9295aa;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.display {
+  position: relative;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 26px 2px 23px;
+  overflow: hidden;
+}
+
+.display__decoration {
+  position: absolute;
+  top: 35px;
+  left: 2px;
+  width: 72px;
+  height: 72px;
+  border: 2px solid rgb(255 255 255 / 72%);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 32%);
+  transform: rotate(-8deg);
+}
+
+.display__expression {
+  min-height: 22px;
+  max-width: 100%;
+  overflow: hidden;
+  color: #9295aa;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.display__value {
+  max-width: 100%;
+  overflow: hidden;
+  color: #fbfbff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(42px, 12vw, 58px);
+  font-weight: 500;
+  letter-spacing: -2.5px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.key {
+  min-width: 0;
+  height: 66px;
+  border: 1px solid transparent;
+  border-radius: 19px;
+  background: #263a30;
+  color: #f5f5fa;
+  cursor: pointer;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  transition: transform 120ms ease, background-color 120ms ease, box-shadow 120ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.key:hover {
+  background: #304a3b;
+}
+
+.key:active {
+  transform: scale(0.94);
+}
+
+.key:focus-visible {
+  outline: 2px solid #8be0a8;
+  outline-offset: 3px;
+}
+
+.key--utility {
+  background: #34483b;
+  color: #c7d9cc;
+  font-size: 18px;
+}
+
+.key--backspace {
+  font-size: 23px;
+}
+
+.key--operator {
+  border-color: rgb(108 220 148 / 18%);
+  background: #294736;
+  color: #9ce6b1;
+  font-size: 25px;
+}
+
+.key--operator:hover {
+  background: #345a43;
+}
+
+.key--operator.is-selected {
+  background: #3b9b5c;
+  color: white;
+  box-shadow: 0 5px 18px rgb(59 155 92 / 32%);
+}
+
+.key--equals {
+  background: linear-gradient(145deg, #55c978, #299451);
+  color: white;
+  font-size: 27px;
+  box-shadow: 0 7px 18px rgb(41 148 81 / 30%);
+}
+
+.key--equals:hover {
+  background: linear-gradient(145deg, #6cda8d, #38aa64);
+}
+
+.calculator__footer {
+  gap: 8px;
+  padding: 20px 2px 0;
+  color: #91a697;
+  font-size: 11px;
+}
+
+.keyboard-hint {
+  color: #aec2b3;
+}
+
+@media (max-width: 380px) {
+  body {
+    padding: 14px;
+  }
+
+  .calculator {
+    padding: 20px;
+    border-radius: 25px;
+  }
+
+  .keypad {
+    gap: 9px;
+  }
+
+  .key {
+    height: 60px;
+    border-radius: 17px;
+  }
+}
+
+@media (max-width: 700px) {
+  .ambient-photo {
+    width: 82px;
+    border-width: 2px;
+    border-radius: 19px;
+    opacity: 0.75;
+  }
+
+  .ambient-photo--left {
+    top: 5%;
+    left: 4%;
+  }
+
+  .ambient-photo--right {
+    right: 4%;
+    bottom: 4%;
+  }
+
+  .ambient-photo--extra {
+    bottom: 4%;
+    left: 4%;
+    width: 68px;
+    border-radius: 16px;
+  }
+
+  .ambient-photo--fourth {
+    top: 5%;
+    right: 4%;
+    width: 68px;
+    border-radius: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
